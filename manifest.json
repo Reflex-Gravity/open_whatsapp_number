@@ -3,7 +3,7 @@
   "name": "Open mobile number on whatsapp",
   "icons": [
     {
-      "src": "/images/icon.png",
+      "src": "/images/icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     },
