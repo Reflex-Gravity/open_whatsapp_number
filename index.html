@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Phone Number on WhatsApp</title>
+    <style>
+        body{
+            background-color: #07a884;
+            font-family: -apple-system,system-ui,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+        header{
+            margin-top: 50px;
+        }
+        footer{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            color: #333;
+            font-weight: 600;
+            font-style: italic;
+        }
+        
+        form{
+            margin:auto;
+        }
+
+        input{
+            padding: 10px 10px;
+            font-size: 32px;
+            margin-top: 50px;
+            text-align: center;
+            border: 0;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input:focus{
+            box-shadow:0px 0px 14px 0px #fff
+        }
+
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+        
+    </style>
+</head>
+<body>
+        <header>
+            <h1>Easily open any Mobile Number on WhatsApp</h1>
+        </header>
+        
+        <form action="https://api.whatsapp.com/send/">
+            <input type="number" name="phone" id="phoneNo" placeholder="Mobile No">
+        </form>
+        <footer>
+            <p>*This website DOES NOT collect any data. It is open-source on <a href="#" rel="noopener noreferrer">Github</a> and developed by <a href="https://joeldsouza.me/" target="_blank" rel="noopener noreferrer">Joel D Souza</a></p>
+        </footer>    
+</body>
+</html>
