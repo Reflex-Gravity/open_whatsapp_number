@@ -1,0 +1,27 @@
+{
+  "short_name": "WhatsApp Number Opener",
+  "name": "Open mobile number on whatsapp",
+  "icons": [
+    {
+      "src": "/images/icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/images/icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icon.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#07a884",
+  "display": "fullscreen",
+  "scope": ".",
+  "theme_color": "#07a884",
+  "description": "Open mobile number on whatsapp without saving it."
+}

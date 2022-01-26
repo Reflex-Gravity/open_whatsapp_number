@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Open Phone Number on WhatsApp</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Open mobile number on whatsapp easily without having to save the contact.">
     <meta name="og:title" property="og:title" content="Open whatsapp number without saving.">
     <meta name="twitter:card" content="Open mobile number on whatsapp easily without having to save the contact.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-status-bar" content="#07a884">
+    <meta name="theme-color" content="#07a884">
     <link rel="canonical" href="https://openwhatsapp.joeldsouza.com/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <title>Open Phone Number on WhatsApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="manifest" href="manifest.json">
     <style>
         #logo {
             position: fixed;
@@ -18,7 +25,7 @@
         }
         body{
             background-color: #07a884;
-            font-family: -apple-system, system-ui, Segoe UI, Roboto;
+            font-family: 'Inter', -apple-system, system-ui, Segoe UI, Roboto;
             text-align: center;
         }
         #app{
@@ -41,6 +48,7 @@
             font-weight: 600;
             background-color: #738784;
             width: 100%;
+            font-size: 13px;
             font-style: italic;
         }
         
@@ -61,6 +69,10 @@
             outline: none;
             transition: all 0.3s;
             border: 2px solid transparent;
+        }
+
+        input {
+            font-weight: 900;
         }
 
         button{
@@ -170,11 +182,23 @@
                 by <a href="https://joeldsouza.me/" target="_blank" rel="noopener noreferrer">Joel D Souza</a></p>
         </footer>
         <script>
-            window.addEventListener("load", () => {
-                if ("serviceWorker" in navigator) {
-                    navigator.serviceWorker.register("service-worker.js");
-                }
+            window.addEventListener('load', () => {
+                registerSW();
             });
+        
+            // Register the Service Worker
+            async function registerSW() {
+                if ('serviceWorker' in navigator) {
+                    try {
+                        await navigator
+                            .serviceWorker
+                            .register('serviceworker.js');
+                    }
+                    catch (e) {
+                        console.log('SW registration failed');
+                    }
+                }
+            }
         </script>
     </div>
 </body>
