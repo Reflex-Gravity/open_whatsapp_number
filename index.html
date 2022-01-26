@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Open mobile number on whatsapp easily.">
+    <meta name="description" content="Open mobile number on whatsapp easily without having to save the contact.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Phone Number on WhatsApp</title>
     <style>
@@ -110,12 +110,30 @@
             font-size: 14px;
             padding-bottom: 5px;
         }
+
+        @media screen and (max-width: 600px) {
+            form {
+                flex-direction: column;
+                width: 100%;
+            }
+            .label-wrapper{
+                width: 100%;
+            }
+            button{
+                margin-top: 10px;
+                width: 100%;
+            }
+            button, input {
+                border-radius: 5px;
+            }
+        }
+
     </style>
 </head>
 <body>
     <div id="app">
         <header>
-            <h1>Easily open any Mobile Number on <i class="whatsapp"><b>WhatsApp</b></i></h1>
+            <h1>Easily open any Mobile Number on <i class="whatsapp"><b>WhatsApp</b></i> without saving the contact.</h1>
         </header>
         
         <form action="https://api.whatsapp.com/send/">
