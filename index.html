@@ -3,24 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Open mobile number on whatsapp easily.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Phone Number on WhatsApp</title>
     <style>
+        #logo {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
         body{
             background-color: #07a884;
-            font-family: -apple-system,system-ui,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif;
+            font-family: -apple-system, system-ui, Segoe UI, Roboto;
             text-align: center;
-            margin: 0;
+        }
+        #app{
+            display: block;
+            margin: auto;
         }
         header{
             margin-top: 50px;
         }
         footer{
             position: fixed;
-            bottom: 10px;
-            right: 10px;
+            bottom: 0;
+            right: 0;
             color: #333;
             font-weight: 600;
+            background-color: #738784;
+            width: 100%;
             font-style: italic;
         }
         
@@ -28,17 +39,34 @@
             margin:auto;
         }
 
-        input{
+        input,
+        button {
             padding: 10px 10px;
             font-size: 32px;
             margin-top: 50px;
             text-align: center;
             border: 0;
-            border-radius: 5px;
+            border-radius: 5px 0px 0px 5px;
             outline: none;
+            transition: all 0.3s;
+            border: 2px solid transparent;
         }
 
-        input:focus{
+        button{
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 0px 5px 5px 0px;
+            background-color: rgb(18 110 102);
+            color: #fff;
+            margin-left: -3px;
+            
+        }
+        button:hover{
+            background-color: transparent;
+            border: 2px solid #2e3e3a;
+        }
+
+        input:focus {
             box-shadow:0px 0px 14px 0px #fff
         }
 
@@ -49,23 +77,54 @@
             margin: 0;
         }
 
+        .whatsapp{
+            color:#2e3e3a;
+        }
+
         /* Firefox */
         input[type=number] {
             -moz-appearance: textfield;
         }
-        
+        a{
+            color:rgb(10, 48, 23);
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px dashed rgb(234, 232, 232);
+            padding: 3px;
+            text-shadow: 0px 0px 1px #636a69;
+        }
+        svg{
+            width: 1em;
+            text-shadow: 0px 0px 1px #636a69;
+            vertical-align: middle;
+            color: rgb(218, 83, 83);
+        }
     </style>
 </head>
 <body>
+    <div id="app">
         <header>
-            <h1>Easily open any Mobile Number on WhatsApp</h1>
+            <h1>Easily open any Mobile Number on <i class="whatsapp"><b>WhatsApp</b></i></h1>
         </header>
         
         <form action="https://api.whatsapp.com/send/">
             <input type="number" name="phone" id="phoneNo" placeholder="Mobile No">
+            <button type="submit">Find</button>
         </form>
         <footer>
-            <p>*This website DOES NOT collect any data. It is open-source on <a href="#" rel="noopener noreferrer">Github</a> and developed by <a href="https://joeldsouza.me/" target="_blank" rel="noopener noreferrer">Joel D Souza</a></p>
-        </footer>    
+            <p>*This website DOES NOT collect any data. It is open-source on <a href="#" rel="noopener noreferrer">Github</a> and developed with 
+                <svg class="svg-inline--fa fa-heart fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                    <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                </svg>
+                by <a href="https://joeldsouza.me/" target="_blank" rel="noopener noreferrer">Joel D Souza</a></p>
+        </footer>
+        <script>
+            window.addEventListener("load", () => {
+                if ("serviceWorker" in navigator) {
+                    navigator.serviceWorker.register("service-worker.js");
+                }
+            });
+        </script>
+    </div>
 </body>
 </html>
