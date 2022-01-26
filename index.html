@@ -26,7 +26,12 @@
             margin: auto;
         }
         header{
+            display: flex;
+            justify-content: center;
             margin-top: 50px;
+        }
+        h1{
+            text-align: left;
         }
         footer{
             position: fixed;
@@ -109,10 +114,20 @@
         }
         label{
             font-style: italic;
-            color: #333;
+            color: rgb(0, 0, 0);
             text-align: start;
             font-size: 14px;
             padding-bottom: 5px;
+        }
+
+        .blink {
+            animation: blinker 1s infinite;
+        }
+  
+        @keyframes blinker {
+            from { opacity: 1.0; }
+            50% { opacity: 0.3; }
+            to { opacity: 1.0; }
         }
 
         @media screen and (max-width: 600px) {
@@ -137,12 +152,12 @@
 <body>
     <div id="app">
         <header>
-            <h1>Easily open any Mobile Number on <i class="whatsapp"><b>WhatsApp</b></i> without saving the contact.</h1>
+            <h1>Easily open any Mobile Number on </br> <i class="whatsapp"><b>WhatsApp</b></i> </br> without saving the contact.</h1>
         </header>
         
         <form action="https://api.whatsapp.com/send/">
             <div class="label-wrapper">
-                <label for="phoneNo">Country code is required without +</label>
+                <label class="blink" for="phoneNo">*Country code is required without +</label>
                 <input type="number" name="phone" id="phoneNo" placeholder="Mobile No">
             </div>
             <button type="submit">Find</button>
