@@ -11,21 +11,21 @@
     <meta name="apple-mobile-web-app-status-bar" content="#07a884">
     <meta name="theme-color" content="#07a884">
     <link rel="canonical" href="https://openwhatsapp.joeldsouza.me/">
-    <link rel="apple-touch-icon" href="/images/icon.png">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/icon.d6b6ae1b.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.7155ca86.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="manifest" href="manifest.json">
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="style.css"></noscript>
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="preload" href="/index.3a01df49.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/index.3a01df49.css"></noscript>
 </head>
 <body>
     
     <div id="app">
         <div class="content">
             <header>
-                <h1>Easily open any Mobile Number on </br> <i class="whatsapp"><b>WhatsApp</b></i> </br> without saving the contact.</h1>
+                <h1>Easily open any Mobile Number on <br> <i class="whatsapp"><b>WhatsApp</b></i> <br> without saving the contact.</h1>
             </header>
             <form action="https://api.whatsapp.com/send/">
                 <div class="label-wrapper">
@@ -38,30 +38,24 @@
         </div>
         <footer>
             <p>*This website DOES NOT collect any data. It is open-sourced on <a href="https://github.com/Reflex-Gravity/open_whatsapp_number" target="_blank" rel="noopener noreferrer">Github</a> and developed with 
-                <svg class="svg-inline--fa fa-heart fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="" alt="Heart">
+                <svg class="svg-inline--fa fa-heart fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" data-fa-i2svg="" alt="Heart">
                     <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
                 </svg>
                 by <a href="https://joeldsouza.me/" target="_blank" rel="noopener noreferrer">Joel D Souza</a></p>
         </footer>
-        <script>
-            window.addEventListener('load', () => {
-                registerSW();
-            });
-        
-            // Register the Service Worker
-            async function registerSW() {
-                if ('serviceWorker' in navigator) {
-                    try {
-                        await navigator
-                            .serviceWorker
-                            .register(new URL('serviceworker.js'));
-                    }
-                    catch (e) {
-                        console.log('SW registration failed');
-                    }
-                }
-            }
-        </script>
+        <script>window.addEventListener('load', ()=>{
+    registerSW();
+});
+// Register the Service Worker
+async function registerSW() {
+    if ('serviceWorker' in navigator) try {
+        await navigator.serviceWorker.register(new URL('serviceworker.js'));
+    } catch (e) {
+        console.log('SW registration failed');
+    }
+}
+
+</script>
     </div>
 </body>
 </html>

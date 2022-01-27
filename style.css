@@ -1,0 +1,153 @@
+#logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+body{
+    background-color: #07a884;
+    font-family: 'Inter', -apple-system, system-ui, Segoe UI, Roboto;
+    text-align: center;
+}
+#app{
+    display: block;
+    margin: auto;
+}
+.content {
+    margin: auto;
+    max-width: 600px;
+}
+header{
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+}
+h1{
+    text-align: left;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    font-weight: 600;
+    background-color: #565c5b;
+    width: 100%;
+    font-size: 13px;
+    font-style: italic;
+    z-index: -1;
+}
+
+form{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+}
+
+input,
+button {
+    padding: 10px 10px;
+    font-size: 25px;
+    text-align: center;
+    border: 0;
+    border-radius: 5px 0px 0px 5px;
+    outline: none;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+input {
+    font-weight: 900;
+}
+
+button{
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 0px 5px 5px 0px;
+    background-color: rgb(18 110 102);
+    font-weight: 600;
+    color: #fff;            
+}
+button:hover{
+    background-color: #2e3e3a;
+    box-shadow:0px 0px 14px -5px #484848;
+}
+
+input:focus {
+    box-shadow:0px 0px 14px 0px #fff
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.whatsapp{
+    color:#2e3e3a;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+a{
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px dashed rgb(0 0 0);
+    padding: 1px;
+    text-shadow: 0px 0px 1px #636a69;
+}
+svg{
+    width: 1em;
+    text-shadow: 0px 0px 1px #636a69;
+    vertical-align: middle;
+    color: rgb(218, 83, 83);
+}
+.label-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+label{
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    text-align: start;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.blink {
+    animation: blinker 1s infinite;
+}
+
+p {
+    line-height: 20px;
+    font-size: 9px;
+}
+
+@keyframes blinker {
+    from { opacity: 1.0; }
+    50% { opacity: 0.3; }
+    to { opacity: 1.0; }
+}
+
+@media screen and (max-width: 600px) {
+    form {
+        flex-direction: column;
+        width: 100%;
+    }
+    .label-wrapper{
+        width: 100%;
+    }
+    button{
+        margin-top: 10px;
+        width: 100%;
+    }
+    button, input {
+        border-radius: 5px;
+    }
+}
