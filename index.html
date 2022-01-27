@@ -15,10 +15,9 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link ref="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="manifest" href="manifest.json">
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="style.css"></noscript>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
@@ -43,7 +42,7 @@
                 </svg>
                 by <a href="https://joeldsouza.me/" target="_blank" rel="noopener noreferrer">Joel D Souza</a></p>
         </footer>
-        <script>
+        <script type="module">
             window.addEventListener('load', () => {
                 registerSW();
             });
@@ -53,8 +52,9 @@
                 if ('serviceWorker' in navigator) {
                     try {
                         await navigator
-                            .serviceWorker
-                            .register(new URL('serviceworker.js'));
+                                .serviceWorker
+                                .register(
+                                    new URL('service-worker.js', import.meta.url), {type: 'module'});
                     }
                     catch (e) {
                         console.log('SW registration failed');
