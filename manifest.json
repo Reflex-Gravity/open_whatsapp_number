@@ -13,14 +13,15 @@
       "sizes": "192x192"
     },
     {
-      "src": "/images/icon.png",
+      "src": "/images/icon-96x96.png",
       "type": "image/png",
       "sizes": "96x96"
     }
   ],
-  "start_url": "/index.html",
+  "start_url": "/",
   "background_color": "#07a884",
   "display": "fullscreen",
+  "orientation":"portrait",
   "scope": ".",
   "theme_color": "#07a884",
   "description": "Open mobile number on whatsapp without saving it."

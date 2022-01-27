@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"lQkcz":[function(require,module,exports) {
+})({"7YryQ":[function(require,module,exports) {
 var _serviceWorker = require("@parcel/service-worker");
 const manifest = [
     "/index.html",
@@ -150,6 +150,7 @@ const manifest = [
     "/favicon.7155ca86.ico",
     "/manifest.webmanifest",
     "/icon-512x512.f4cd26b9.png",
+    "/icon-96x96.d873c719.png",
     "/index.3a01df49.css"
 ];
 const version = "fe55c3a3";
@@ -596,6 +597,6 @@ async function activate() {
 addEventListener("activate", (e)=>e.waitUntil(activate())
 );
 
-},{"@parcel/service-worker":"lUmb9"}]},["lQkcz","6wrJ5","jBR63"], "jBR63", "parcelRequire94c2")
+},{"@parcel/service-worker":"lUmb9"}]},["7YryQ","6wrJ5","jBR63"], "jBR63", "parcelRequire94c2")
 
 //# sourceMappingURL=service-worker.js.map
