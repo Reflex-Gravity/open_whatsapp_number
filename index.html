@@ -33,10 +33,14 @@
             display: block;
             margin: auto;
         }
+        .content {
+            margin: auto;
+            max-width: 600px;
+        }
         header{
             display: flex;
-            justify-content: center;
             margin-top: 50px;
+            width: 100%;
         }
         h1{
             text-align: left;
@@ -51,6 +55,7 @@
             width: 100%;
             font-size: 13px;
             font-style: italic;
+            z-index: -1;
         }
         
         form{
@@ -58,6 +63,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-end;
+            width: 100%;
         }
 
         input,
@@ -125,6 +131,7 @@
         .label-wrapper{
             display: flex;
             flex-direction: column;
+            width: 100%;
         }
         label{
             font-style: italic;
@@ -140,6 +147,7 @@
 
         p {
             line-height: 20px;
+            font-size: 9px;
         }
   
         @keyframes blinker {
@@ -169,17 +177,19 @@
 </head>
 <body>
     <div id="app">
-        <header>
-            <h1>Easily open any Mobile Number on </br> <i class="whatsapp"><b>WhatsApp</b></i> </br> without saving the contact.</h1>
-        </header>
-        
-        <form action="https://api.whatsapp.com/send/">
-            <div class="label-wrapper">
-                <label class="blink" for="phoneNo">*Country code is required without +</label>
-                <input type="number" name="phone" id="phoneNo" placeholder="Mobile No">
-            </div>
-            <button type="submit">Find</button>
-        </form>
+        <div class="content">
+            <header>
+                <h1>Easily open any Mobile Number on </br> <i class="whatsapp"><b>WhatsApp</b></i> </br> without saving the contact.</h1>
+            </header>
+            
+            <form action="https://api.whatsapp.com/send/">
+                <div class="label-wrapper">
+                    <label class="blink" for="phoneNo">*Country code is required without +</label>
+                    <input type="number" name="phone" id="phoneNo" placeholder="Mobile No">
+                </div>
+                <button type="submit">Find</button>
+            </form>
+        </div>
         <footer>
             <p>*This website DOES NOT collect any data. It is open-sourced on <a href="https://github.com/Reflex-Gravity/open_whatsapp_number" target="_blank" rel="noopener noreferrer">Github</a> and developed with 
                 <svg class="svg-inline--fa fa-heart fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="" alt="Heart">
