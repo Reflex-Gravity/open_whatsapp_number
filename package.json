@@ -1,8 +1,18 @@
 {
+  "name": "open-whatsapp-number",
+  "version": "0.0.1",
+  "author": {
+    "name": "Joel D Souza",
+    "email": "joeljeevan10@gmail.com",
+    "url": "https://joeldsouza.me"
+  },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.2.1",
     "@parcel/transformer-webmanifest": "^2.2.1",
     "parcel": "^2.2.1"
+  },
+  "scripts": {
+    "build": "export NODE_OPTIONS=--no-experimental-fetch && yarn parcel build index.html"
   },
   "dependencies": {
     "@parcel/service-worker": "^2.2.1"
